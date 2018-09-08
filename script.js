@@ -537,3 +537,49 @@ console.log (john.age);
 */
 
 
+var jhon = {
+    fullName: 'Jhon',
+    mass: 80,
+    height: 1.10,
+    calcBmi: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+
+var mark = {
+    fullName: 'mark',
+    mass: 65,
+    height: 1.67,
+    calcBmi: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+
+
+;
+//mark.bmi = calcBmi(this.mass, this.height);
+//jhon.bmi = calcBmi(this.mass, this.height):
+/*
+switch(true){
+    case mark.calcBmi() > jhon.calcBmi():
+        console.log('Mark ha vinto con ' + mark.bmi);
+        break;
+    case mark.Bmi < jhon.bmi:
+        console.log('John ha vinto con ' + jhon.bmi);
+        break;
+    default:
+        console.log('è un pareggio: ' + mark.bmi + ' = ' + jhon.bmi);
+        break;
+}*/
+
+if (mark.calcBmi() > jhon.calcBmi()) {
+    console.log('Mark ha vinto con ' + mark.bmi);    
+}
+else if(mark.Bmi < jhon.bmi) {
+    console.log('John ha vinto con ' + jhon.bmi);
+}
+else {
+    console.log('è un pareggio: ' + mark.bmi + ' = ' + jhon.bmi);
+}
