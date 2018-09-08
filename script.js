@@ -373,14 +373,14 @@ yearsUntilRetirement(1948, 'John');
 yearsUntilRetirement(1969, 'John');
 /*********************************************
 * function statements and expression
-*/
+*
 
 /*
 // function declaration
 function whatDoYouDo(job, firstName){
 
 }
-*/
+*
 // function expression
 var whatDoYouDo = function(job, firstName){
     switch(job) {
@@ -391,5 +391,52 @@ var whatDoYouDo = function(job, firstName){
         case 'designer':
             return firstName + ' si fa i cazzi suoi';
         default:
+            return firstName + ' non fa un cazzo';
     }
 }
+
+console.log(whatDoYouDo('teacher', 'Jhon'));
+console.log(whatDoYouDo('driver', 'Mark'));
+console.log(whatDoYouDo('è in pensione', 'Manotti'));
+/*********************************************
+* Arrays
+*/
+
+// initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990,1969,1948);
+
+
+console.log(names[0], names[1], names[2]);
+console.log(names);
+console.log(names.length);
+
+// mutate array data
+names[1] = 'Ben';
+console.log(names);
+names[names.length] = 'mery';
+
+console.log(names);
+
+//Different data types
+
+var jhon = ['Jhon', 'Smith', 1990, 'teacher', false];
+console.log(jhon);
+
+jhon.push('blue');
+console.log(jhon);
+
+jhon.unshift('Mr');
+console.log(jhon);
+
+jhon.pop(jhon);
+jhon.pop(jhon);
+jhon.shift(jhon);
+console.log(jhon);
+console.log(jhon.indexOf(1990));
+console.log(jhon.indexOf(93));
+
+var isDesigner = jhon.indexOf('designer') === - 1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
+    
+console.log(jhon.indexOf('teacher') === - 1 ? 'John is NOT a designer' : 'John IS a designer');
