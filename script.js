@@ -205,10 +205,10 @@ else {
 /*
 /*********************************************
  * Boolean logic
- */
+ *
  
 var nome = 'Lorenzo';
-var age = 16;
+var age = 20;
 
 if (age < 13){
     console.log(nome + ' è un ragazzo');
@@ -216,7 +216,98 @@ if (age < 13){
 else if (age >=13 && age < 20){ //tra 13 e 20
     console.log(nome + ' è un teenager');
 }
+else if (age >=20 && age < 30){ //tra 13 e 20
+    console.log(nome + ' è un giovane uomo');
+}
 else {
     console.log(nome + ' è un uomo');
 }
+*/
+/*********************************************
+ * the ternary operator
+ *
 
+var nome = 'Lorenzo';
+
+var age = 18;
+// ternary operator
+age >= 18 ? console.log(nome + ' beve birra')
+: console.log(nome + ' beve succhi');
+
+var drink = age >= 18 ? 'beer' : 'juice';
+
+console.log(nome + ' beve ' + drink);
+
+/*
+if (age >= 18){
+    var drink = 'beer';
+}
+else {
+    var drink = 'juice';
+}
+*
+
+// switch operator
+var nome = 'Lorenzo';
+var job = 'programmatore';
+
+switch (job) {
+    case 'insegnante':
+    case 'programmatore':
+        console.log(nome + ' insegna il javascript');
+        break;
+    case 'pornoattore':
+        console.log(nome + ' punisce le studentesse ribelli');
+        break;
+    case 'designer':
+        console.log(nome + ' disegna siti porno');
+        break;
+    default:
+        console.log(nome + ' fa schifo al cazzo');
+        break;
+
+}
+var age = 22;
+
+switch (true){
+    case age < 13:
+        console.log(nome + ' è un ragazzo');
+        break;
+    case age >=13 && age < 20:
+        console.log(nome + ' è un teenager');
+        break;
+    case age >=20 && age < 30:
+        console.log(nome + ' è un giovane uomo');
+        break;
+    default:
+        console.log(nome + ' è un uomo');
+        break;
+    
+}
+
+/*********************************************
+ * truty and falsy
+ *
+
+// falsy values, undifined, null, 0, NaN
+// truty values: NOT falsy values
+
+var height = 23;
+
+if  (height || height === 0 || height === ''){
+    console.log('Variable is defined');
+}
+else{
+    console.log('Variable is undefined');
+}
+
+//equality operator
+if  (height == '23'){
+    console.log('The == operator dose type coercion');
+}
+if  (height === '23'){
+    console.log('The == operator dose type coercion');
+}
+/*********************************************
+ * Coding challenge 2
+ */
