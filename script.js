@@ -477,5 +477,37 @@ console.log(tips);
 console.log(total);
 
 /*********************************************
-* 
+* object and proprierties
+*
+
+//object literal
+var john = {
+    firstname: 'john', 
+    lastName: 'smith',
+    birthYear: 1990,
+    family: ['jane', 'mark', 'bob', 'emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john['lastName']);
+console.log(john.firstname);
+console.log(john.family);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john.job, john['isMarried']);
+console.log(john);
+
+var jane = new Object();
+//new object syntax
+jane.firstname = 'Jane';
+jane.birthYear = 1969;
+jane.lastName = 'Smith';
+jane['cazzo'] = false;
+console.log(jane);
+/*********************************************
+* methods
 */
