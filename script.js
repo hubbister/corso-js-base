@@ -310,7 +310,7 @@ if  (height === '23'){
 }
 /*********************************************
 * Coding challenge 2
-*/
+*
 var johnTeam1 = 89;
 var johnTeam2 = 120;
 var johnTeam3 = 103;
@@ -340,3 +340,56 @@ switch(true){
         console.log('è un pareggio');
         break;
  }
+
+ 
+/*********************************************
+* function
+*
+
+function calculateAge(birthYear) {
+    return 2018 - birthYear;
+}
+
+var ageJhon = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJhon, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName){
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+
+    if (retirement > 0) {
+        console.log(firstName + ' retires in ' + retirement + ' Years')
+    }
+    else {
+        console.log(firstName + ' is already retired')
+    }
+    
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'John');
+yearsUntilRetirement(1969, 'John');
+/*********************************************
+* function statements and expression
+*/
+
+/*
+// function declaration
+function whatDoYouDo(job, firstName){
+
+}
+*/
+// function expression
+var whatDoYouDo = function(job, firstName){
+    switch(job) {
+        case 'teacher':
+            return firstName + ' insegna il codice';
+        case 'driver':
+            return firstName + ' guida';
+        case 'designer':
+            return firstName + ' si fa i cazzi suoi';
+        default:
+    }
+}
