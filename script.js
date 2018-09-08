@@ -534,7 +534,7 @@ console.log (john.age);
 
 /*********************************************
 * esercizio 4
-*/
+*
 
 
 var jhon = {
@@ -572,7 +572,7 @@ switch(true){
     default:
         console.log('è un pareggio: ' + mark.bmi + ' = ' + jhon.bmi);
         break;
-}*/
+}*
 
 if (mark.calcBmi() > jhon.calcBmi()) {
     console.log('Mark ha vinto con ' + mark.bmi);    
@@ -581,3 +581,15 @@ if (mark.calcBmi() > jhon.calcBmi()) {
 } else {
     console.log('è un pareggio: ' + mark.bmi + ' = ' + jhon.bmi);
 }
+
+/*********************************************
+* loops and iteration
+*/
+
+
+for (var i = 0; i < 10; i++){
+    console.log(i);
+}
+
+
+
