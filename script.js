@@ -604,7 +604,7 @@ var i = 0;
 while (i < jhon.length){
     console.log(jhon[i]);
     i++;
-}*/
+}*
 // continue and breake
 
 
@@ -620,3 +620,123 @@ for (var i = 0; i < jhon.length; i++){
     
     
 }
+
+// for
+for (var i = 0; i < jhon.length; i++){
+    
+    if(typeof jhon[i] !== 'string') break;
+       
+    console.log(jhon[i]);    
+    
+    
+}
+
+
+for (var i = jhon.length - 1; i > 0; i--){
+    
+ //   if(typeof jhon[i] !== 'string') break;
+       
+    console.log(jhon[i]);    
+    
+    
+/*********************************************
+* esercizio 5
+*/
+
+//prima parte
+var tipCalculatorL = {
+    bills: [124, 48,268,180,42],  
+    calcTip: function(){
+
+        this.tips = [];
+        this.total = [];
+
+        for(i = 0; i < this.bills.length; i++){
+
+            if(this.bills[i] < 50) { 
+                this.tips[i] = this.bills[i]  * .2; 
+            }
+            else if(this.bills[i] > 50 && this.bills[i] < 200) {
+                this.tips[i] = this.bills[i]  * .15;
+            }
+            else {
+                this.tips[i] = this.bills[i]  * .1;
+            }
+            this.total[i] = this.tips[i] + this.bills[i];
+        }
+        
+    
+        this.avg = this.avg / this.bills.length;
+    }
+};
+
+tipCalculatorL.calcTip();
+
+
+console.log(tipCalculatorL);
+
+//seconda parte
+var tipCalculatorM = {
+    bills: [77, 475, 110, 45],
+
+    calcTip: function(){
+        this.tips = [];
+        this.total = [];
+        
+    
+        for(i = 0; i < this.bills.length; i++){
+            var percentage;
+            var bill = this.bills[i];
+
+            if(bill < 100) {
+                percentage = .2;
+            }
+            else if(bill >= 100 && bill  < 300) {
+                percentage = .1;
+            }
+            else {
+                percentage = .25;
+            }
+
+            this.tips[i] = percentage * bill;
+            this.total[i] = this.tips[i] + bill;
+            this.avg += this.tips;
+        }
+
+        this.avg = this.avg / this.bills.length;
+    }
+};
+
+tipCalculatorM.calcTip();
+console.log(tipCalculatorM);
+
+
+function avgTip(tipArray) {
+    var avg = 0;
+    
+    for (var i = 0; i < tipArray.length; i ++){
+        avg = avg + tipArray[i];
+    };
+    
+    avg = avg / tipArray.length;
+    
+    return avg;
+
+}
+
+tipCalculatorL.avg = avgTip(tipCalculatorL.tips);
+tipCalculatorM.avg = avgTip(tipCalculatorM.tips);
+
+
+console.log(tipCalculatorL.avg);
+console.log(tipCalculatorM.avg);
+
+if (avgTip(tipCalculatorL.tips) > avgTip(tipCalculatorM.tips)) {
+    console.log('ha vinto Luke con' + avgTip(tipCalculatorL.tips))
+} else if (avgTip(tipCalculatorL.tips) < avgTip(tipCalculatorM.tips)) {
+    console.log('ha vinto marc con' + avgTip(tipCalculatorM.tips))
+} else {
+    console.log('E\' un pareggio ' + tipCalculatorL.avg + ' ' + tipCalculatorM.avg);
+}
+
+
