@@ -309,5 +309,34 @@ if  (height === '23'){
     console.log('The == operator dose type coercion');
 }
 /*********************************************
- * Coding challenge 2
- */
+* Coding challenge 2
+*/
+var johnTeam1 = 89;
+var johnTeam2 = 120;
+var johnTeam3 = 103;
+
+var markTeam1 = 116;
+var markTeam2 = 94;
+var markTeam3 = 123;
+
+var johnAvg = ( 189 + 120 + 103) / 3;
+var markAvg = ( 116 + 94 + 123) / 3;
+var maryAvg = ( 97 + 104 + 105) / 3;
+
+
+console.log(johnAvg + ' ' + markAvg + ' ' + maryAvg);  
+
+switch(true){
+    case maryAvg > markAvg && maryAvg > johnAvg:    
+        console.log('Mary vince');     
+        break;
+    case markAvg > maryAvg && markAvg > johnAvg:    
+        console.log('Mark vince');     
+        break;
+    case johnAvg > markAvg && johnAvg > maryAvg:    
+        console.log('jhon vince');     
+        break;
+    default:
+        console.log('è un pareggio');
+        break;
+ }
