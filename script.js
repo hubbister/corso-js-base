@@ -400,7 +400,7 @@ console.log(whatDoYouDo('driver', 'Mark'));
 console.log(whatDoYouDo('è in pensione', 'Manotti'));
 /*********************************************
 * Arrays
-*/
+*
 
 // initialize new array
 var names = ['John', 'Mark', 'Jane'];
@@ -440,3 +440,42 @@ var isDesigner = jhon.indexOf('designer') === - 1 ? 'John is NOT a designer' : '
 console.log(isDesigner);
     
 console.log(jhon.indexOf('teacher') === - 1 ? 'John is NOT a designer' : 'John IS a designer');
+*/
+/*********************************************
+* Coding challenge
+*
+
+
+var tipCalculator = function(bill){
+ switch(true){
+    case bill < 50:
+        var percentage = .2; 
+        break;
+    case bill >= 50 && bill < 200:
+        var percentage = .15; 
+        break;
+    case bill >= 200:
+        var percentage = .10;                 
+        break;
+    }  
+    
+    console.log(bill, percentage);
+    return bill * percentage;       
+
+};
+
+var totalAmount = function(bill){
+    return bill + tipCalculator(bill);
+}
+
+var amaunt = [124,48,268];
+var tips = [tipCalculator(amaunt[0]), tipCalculator(amaunt[1]), tipCalculator(amaunt[2])];
+var total = [totalAmount(amaunt[0]), totalAmount(amaunt[1]), totalAmount(amaunt[2])];
+
+console.log(amaunt);
+console.log(tips);
+console.log(total);
+
+/*********************************************
+* 
+*/
