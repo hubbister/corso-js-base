@@ -576,10 +576,8 @@ switch(true){
 
 if (mark.calcBmi() > jhon.calcBmi()) {
     console.log('Mark ha vinto con ' + mark.bmi);    
-}
-else if(mark.Bmi < jhon.bmi) {
+} else if(mark.bmi < jhon.bmi) {
     console.log('John ha vinto con ' + jhon.bmi);
-}
-else {
+} else {
     console.log('è un pareggio: ' + mark.bmi + ' = ' + jhon.bmi);
 }
