@@ -510,4 +510,30 @@ jane['cazzo'] = false;
 console.log(jane);
 /*********************************************
 * methods
+*
+
+var john = {
+    firstname: 'john', 
+    lastName: 'smith',
+    birthYear: 1992,
+    family: ['jane', 'mark', 'bob', 'emily'],
+    job: 'teacher',
+    isMarried: false,
+    calcAge: function() {
+        this.age = 2018 - this.birthYear;
+    }
+};
+
+//console.log (john.calcAge(1990));
+
+//console.log (john.calcAge());
+
+john.calcAge();
+
+console.log (john.age);
+
+/*********************************************
+* esercizio 4
 */
+
+
