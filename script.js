@@ -641,7 +641,7 @@ for (var i = jhon.length - 1; i > 0; i--){
     
 /*********************************************
 * esercizio 5
-*/
+*
 
 //prima parte
 var tipCalculatorL = {
@@ -739,4 +739,4 @@ if (avgTip(tipCalculatorL.tips) > avgTip(tipCalculatorM.tips)) {
     console.log('E\' un pareggio ' + tipCalculatorL.avg + ' ' + tipCalculatorM.avg);
 }
 
-
+*/
