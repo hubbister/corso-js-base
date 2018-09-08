@@ -586,10 +586,37 @@ if (mark.calcBmi() > jhon.calcBmi()) {
 * loops and iteration
 */
 
-
-for (var i = 0; i < 10; i++){
+/*
+for (var i = 1; i <= 20; i+=2){
     console.log(i);
 }
+*
+
+var jhon = ['Jhon', 'Smith', 1990, 'designer', false, 'blue'];
+
+// for
+for (var i = 0; i < jhon.length; i++){
+    console.log(jhon[i]);
+}
+
+var i = 0;
+// while
+while (i < jhon.length){
+    console.log(jhon[i]);
+    i++;
+}*/
+// continue and breake
 
 
 
+var jhon = ['Jhon', 'Smith', 1990, 'designer', false, 'blue'];
+
+// for
+for (var i = 0; i < jhon.length; i++){
+    
+    if(typeof jhon[i] !== 'string') continue;
+       
+    console.log(jhon[i]);    
+    
+    
+}
