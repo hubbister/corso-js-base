@@ -152,7 +152,7 @@ console.log('john è più alto\' di mark? ' + chièpiùalto);
 /*********************************************
  * If / else statements
 */
-
+/*
 var nome = 'Lorenzo';
 var statoCivile = 'single';
 
@@ -201,3 +201,22 @@ else {
 //var chièpiùalto = bimMark > bimJohn;
 //console.log('john è più alto\' di mark? ' + chièpiùalto);
 //test
+*/
+/*
+/*********************************************
+ * Boolean logic
+ */
+ 
+var nome = 'Lorenzo';
+var age = 16;
+
+if (age < 13){
+    console.log(nome + ' è un ragazzo');
+}
+else if (age >=13 && age < 20){ //tra 13 e 20
+    console.log(nome + ' è un teenager');
+}
+else {
+    console.log(nome + ' è un uomo');
+}
+
