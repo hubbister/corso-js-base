@@ -2,21 +2,34 @@
 // Lecture: Hoisting
 
 
+/*
+// functions
+calculateAge(1965);
 
 
+function calculateAge(year) {
+    console.log(2016 - year);
+    
+}
 
+//retirement(1987);
 
+var retirement = function(year){
+    console.log(65 - (2016 - year));
+}
 
+//variables
+console.log(age);
+var age = 23;
 
+function foo()  {
+    console.log(age); 
+    var age = 65;
+    console.log(age);
+}
 
-
-
-
-
-
-
-
-
+foo();
+console.log(age);*/
 ///////////////////////////////////////
 // Lecture: Scoping
 
@@ -34,13 +47,15 @@ function first() {
         console.log(a + b + c);
     }
 }
-*/
 
 
 
+
+
+*
 // Example to show the differece between execution stack and scope chain
 
-/*
+
 var a = 'Hello!';
 first();
 function first() {
@@ -53,32 +68,49 @@ function first() {
 }
 function third() {
     var d = 'John';
-    console.log(a + b + c + d);
+//    console.log(a + b + c + d);
+    console.log(a + d);
 }
+
+
 */
-
-
 
 ///////////////////////////////////////
 // Lecture: The this keyword
 
+console.log(this);
 
+calculateAge(1985);
 
+function calculateAge(year) {
+    console.log (2016 - year);
+    console.log(this);
+}
 
+var jhon = {
+    name: 'jhon',
+    yearOfBirth: 1990,
+    calculateAge: function()
+    {
+        console.log(this);
+        console.log(2016 - this.yearOfBirth);
+        /*
+        retirement(this.yearOfBirth);
 
+        function retirement(yearOfBirth){
+            console.log(this);
+            console.log(65 - (2016 - yearOfBirth));
+        }*/
+    }
+}
 
+jhon.calculateAge();
 
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984
+};
 
+mike.calculateAge = jhon.calculateAge;
 
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+mike.calculateAge();
